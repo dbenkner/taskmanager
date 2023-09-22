@@ -1,0 +1,43 @@
+Taskmanager app
+
+users table
+user id, username, password, bool isadmin, isManager
+userId 
+userName string
+password string
+isAdmin bool
+isManager bool
+
+projects table
+id, projectname, projectleader fk to userid, dateCreated, dateDue, dateCompleted
+id int
+projectName string
+projectLeader fk to userId
+dateCreated
+dateDue
+dateCompleted
+
+tasks table
+id, taskname, projectId, dateStarted, dueDate, dateCompleted, projectStatus, proritylevel
+details
+id int
+taskname string
+projectId int fk to projectId
+dateStarted
+datetime nullable
+dueDate
+datetime
+dateCompleted
+nullable datetime
+projectStatus
+string "NEW", "INPROGRESS", "COMPLETED"
+prorityLevel 
+string "LOW", "MEDIUM", "HIGH"
+
+
+taskAssignment
+id, taskid, userid
+int id
+taskid int fk to taskId
+userId int fk to userId
+
